@@ -1,53 +1,60 @@
-/* style.css */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f9fa;
+    margin: 20px;
 }
 
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    flex-direction: column;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9; /* Light background color to distinguish the container */
 }
 
 .child-container {
-    width: 80%;
-    max-width: 600px;
-    background: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    margin-bottom: 20px;
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #007bff; /* Blue border to highlight the child container */
+    border-radius: 5px;
+    background-color: #ffffff; /* White background for better contrast */
 }
 
 .input-box-container {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
-.add-task-box, .task-category, .task-time, .filter-category {
+h1, h2 {
+    color: #007bff; /* Blue color for headings */
+    margin-bottom: 20px; /* Additional margin below headings */
+    border-bottom: 2px solid #007bff; /* Underline to highlight the headings */
+    padding-bottom: 5px; /* Padding below the heading text */
+}
+
+.add-task-box,
+.task-category,
+.task-date,
+.task-time {
     width: 100%;
     padding: 10px;
-    font-size: 16px;
+    margin-top: 5px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
 .btn-container {
-    text-align: center;
-    margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 .get-task-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
     background-color: #007bff;
     color: white;
-    padding: 10px 20px;
     font-size: 16px;
-    border: none;
-    border-radius: 4px;
     cursor: pointer;
 }
 
@@ -59,13 +66,18 @@ body {
     background-color: #0056b3;
 }
 
-.show-data, .completed-data {
+.show-data,
+.completed-data,
+.all-data {
     margin-top: 20px;
 }
 
-h2 {
-    margin-bottom: 10px;
-    text-align: center;
+.table-container {
+    max-height: 300px; /* Adjust the height as needed */
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
 }
 
 table {
@@ -74,29 +86,17 @@ table {
 }
 
 th, td {
-    padding: 12px;
+    border: 1px solid #ddd;
+    padding: 8px;
     text-align: left;
-    border-bottom: 1px solid #ddd;
 }
 
 th {
     background-color: #f2f2f2;
+    color: #007bff; /* Blue color for table headers */
+    font-weight: bold;
 }
 
-.complete-btn, .delete-btn {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-}
-
-.complete-btn i {
-    color: green;
-}
-
-.delete-btn i {
-    color: red;
-}
-
-.delete-btn:hover i, .complete-btn:hover i {
-    opacity: 0.7;
+tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
