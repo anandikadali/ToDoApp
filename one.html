@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Task Manager</title>
+</head>
+<body>
+    <div class="container">
+        <div class="child-container" id="child-container">
+            
+                
+            
+            <div class="get-data">
+                <div class="get-data-container">
+                    <div class="input-box-container">
+                        <input type="text" class="add-task-box" id="write-task" placeholder="Enter task description">
+                    </div>
+                    <div class="input-box-container">
+                        <select id="task-category" class="task-category">
+                            <option value="">Select Category</option>
+                            <option value="Education">Education</option>
+                            <option value="Health">Health</option>
+                            <option value="Environment">Environment</option>
+                            <option value="Technology">Technology</option>
+                            <option value="Community">Community</option>
+                        </select>
+                    </div>
+                    <div class="input-box-container">
+                        <input type="date" id="task-date" class="task-date">
+                    </div>
+                    <div class="input-box-container">
+                        <input type="time" id="task-time" class="task-time">
+                    </div>
+                    <div class="btn-container">
+                        <button class="get-task-btn" id="add-task-btn"><i class="fa fa-plus-square"></i> Add Task</button>
+                    </div>
+                </div>
+            </div>
+            <div class="show-data" id='show-data'>
+                <h2>Incomplete Tasks</h2>
+                <table id="table">
+                    <thead>
+                        <tr>
+                            <th>Sno</th>
+                            <th>Task</th>
+                            <th>Category</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="task-list">
+                        <!-- Tasks will be dynamically added here -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="completed-data" id='completed-data'>
+                <h2>Completed Tasks</h2>
+                <table id="completed-table">
+                    <thead>
+                        <tr>
+                            <th>Sno</th>
+                            <th>Task</th>
+                            <th>Category</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Action</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="completed-task-list">
+                        <!-- Completed tasks will be dynamically added here -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="all-data" id='all-data'>
+                <h2>All Tasks</h2>
+                <table id="all-table">
+                    <thead>
+                        <tr>
+                            <th>Sno</th>
+                            <th>Task</th>
+                            <th>Category</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Action</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="all-task-list">
+                        <!-- All tasks will be dynamically added here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
